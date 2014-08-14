@@ -5,3 +5,7 @@
   .dark-font h2 {
     color: #333333;
     text-shadow: 1px 1px 2px white; }
+
+.img-float-left {
+  float: left;
+  margin-right: 10px !important; }
