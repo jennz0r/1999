@@ -39,7 +39,7 @@
 			<!-- Title Slide -->
 				<section data-background="img/prince01b.jpg" data-transition="fade" data-background-transition="fade">
 					<h2>Tonight We're Gonna Code Like It's 1999</h2>
-					<h3>Designing Responsive Emails</h3>
+					<h3>Creating Responsive Emails</h3>
 					<p>
 						<small>By <a href="http://mochimachine.org/">Jennifer Wong</a> / <a href="http://twitter.com/mybluewristband">@mybluewristband</a></small>
 					</p>
@@ -245,12 +245,12 @@
 						</aside>
 					</section>
 					<section>
-						<h2>Templates</h2>
+						<h2>Pre-Made Templates</h2>
 						<p>There are a LOT of options.</p>
 						<img src="img/all_the_things.png">
 						<p>... which I'll talk about <a href="#/11/1">a bit later</a>.</p>
 						<aside class="notes">
-							Do you want one?
+							Do you want one? Do you need one?
 						</aside>
 					</section>
 					<section>
@@ -275,15 +275,29 @@
 							
 						</aside>
 					</section>
+					<section>
+						<h2>Images</h2>
+						<h3>Rule of Thumbs</h3>
+						<p>Minimum touchable area: 44px by 44px</p>
+						<p><a href="http://www.smashingmagazine.com/2012/02/21/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/">Smashing Magazine: Touchscreen Target Sizes</a></p>
+						<p><a href="http://pugetworks.com/blog/2012/02/minimum-touchable-area-on-mobile-devices/">Puget Works: Minimum Touchable Areas</a></p>
+					</section>
+					<aside class="notes">
+						Based on the original iPhone Human Interface Guidelines for the first iPhone, which no longer exist.
+					</aside>
 				</section>
 
 				<!-- Slide 07 -->
 				<section>
 					<section>
+						<img src="img/welcome_email_first_pass.png">
+					</section>
+					<section>
 						<img src="img/welcome_email_new.png">
 						<aside class="notes">
 							So pretty!
 							I left the copy alone.
+							I mimicked the look of our website with the image footer.
 						</aside>
 					</section>
 					<section>
@@ -316,7 +330,7 @@
 					</a>
 
 					<aside class="notes">
-						This was my first time seeing Java, let alone templates for Java. And I was thrust into the wild world of Model View Controller. I had to translate the Velocity templates into JSPs. You can see why HotPads decided to go with JSP - the delineation between template language and HTML is much clearer.
+						This was my first time seeing Java, let alone templates for Java. And I was thrust into the wild world of Model View Controller. I had to translate the Velocity templates into JSPs. You can see why HotPads decided to go with JSP - the delineation between template language and HTML is much clearer. This will likely not be a concern for you, but now you'll understand that the weirdnesses in my HTML are due to JSP.
 					</aside>
 				</section>
 
@@ -334,10 +348,16 @@
 					<p>Blah</p>
 				</section>
 
-
+				<section>
+					<h2>Width</h2>
+					<p>600px</p>
+				</section>
 
 				<section>
-					<pre><code data-trim contenteditable>
+					<section>
+						<h2>My Template</h2>
+						<a href="https://github.com/jennz0r/email-template/blob/master/genericTemplate.html">Code</a>
+						<pre><code data-trim contenteditable>
 
 <table width="100%">
     <tr>
@@ -353,7 +373,12 @@
     </tr>
 </table>
 
-					</code></pre>
+						</code></pre>
+					</section>
+					<section>
+						<h2>Why Template?</h2>
+
+					</section>
 				</section>
 
 				<section data-background="#4d7e65">
@@ -361,16 +386,48 @@
 				</section>
 
 				<section>
-					<p>Blah</p>
+					<h2>Device Pixel Ratio</h2>
+				</section>
+
+				<section>
+					<h2>Media Queries</h2>
+				</section>
+
+				<section>
+					<section>
+						<h2>Line Height</h2>
+						<img src="img/line_height_issue.png">
+					</section>
+					<section>
+						<p>i just sent you the test i'm now trying to figure out why the blue border on the bottom is extending 3px beyond the bottom of the footer image<br/>
+						that spacing is weird, it's due to line-height you can either set line-height: 0 on the surrounding td or you can set the image to display: block, so it doesn't interact with line heights</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Inline Overwriting Media Query (Padding)</h2>
 				</section>
 
 				<section data-background="#4d7e65">
 					<h2>Things I Learned After Release</h2>
-					<h4>OOPS</h4>
+					<h4>Oops</h4>
 				</section>
 
 				<section>
-					<p>Blah</p>
+					<section>
+						<h2>High Res Images for Retina</h2>
+						<img src="img/retina_img_issue.png">
+					</section>
+					<section>
+						<p>The problem: Outlook 2007, 2010, 2013, and Outlook in Internet Explorer do not allow adjustment of image sizes via HTML or CSS.</p>
+						<p>The solution: maybe we could have the img be the real size and have a responsive style block that checks the screen dpi and replaces the img with a high resolution one when necessary</p>
+						<p><a href="https://www.campaignmonitor.com/guides/mobile/optimizing-images/">Campaign Monitor</a></p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Outlook 2007, 2010, & 2013</h2>
+					<p><a href="http://stylecampaign.com/blog/2011/08/using-media-to-bypass-max-width/">Style Campaign Max Width Bypass</a></p>
 				</section>
 
 				<section data-transition="linear" data-background="#007777" data-background-transition="slide">
