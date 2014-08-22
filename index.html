@@ -259,12 +259,9 @@
                     <section>
                         <h2>Scalable</h2>
                         <img src="img/scalable.png">
-                        <p>
-                            Perfect for:
-                            Testing the mobile waters
-                            Reliable rendering across clients and devices
-                            Teams with limited resources
-                        </p>
+                        <p>Testing the mobile waters</p>
+                        <p>Reliable rendering across clients and devices</p>
+                        <p>Teams with limited resources</p>
                         <aside class="notes">
                             A simple (usually single-column) layout that scales down nicely.
                             Large text that is readable on screens of all sizes.
@@ -274,12 +271,9 @@
                     <section>
                         <h2>Fluid</h2>
                         <img src="img/fluid.png">
-                        <p>
-                            Perfect for:
-                            Simple layouts
-                            Emails with mostly text that can flow
-                            Teams with limited resources
-                        </p>
+                        <p>Simple layouts</p>
+                        <p>Emails with mostly text that can flow</p>
+                        <p>Teams with limited resources</p>
                         <aside class="notes">
                             Fluid emails use percentage-based sizing to make the width of tables and images adapt to the screen size on which they are viewed, similar to what is known as “liquid” layouts on the web. Fluid emails are similar to scalable ones, in that they don’t purposefully alter the layout or content of an email, but they have the added benefit of having content “flow” to fill space on the screen. For this reason, fluid designs typically work best for text-heavy layouts since there’s less control over how copy and images relate to each other.
                         </aside>
@@ -287,12 +281,9 @@
                     <section>
                         <h2>Responsive</h2>
                         <img src="img/responsive.png">
-                        <p>
-                            Perfect for:
-                            Large mobile audiences
-                            The most control over layout
-                            Teams with knowledge of media queries
-                        </p>
+                        <p>Large mobile audiences</p>
+                        <p>The most control over layout</p>
+                        <p>Teams with knowledge of media queries</p>
                         <aside class="notes">
                             Responsive email takes everything from scalable and fluid emails and builds on it by adding more control via CSS media queries. While media queries are also used to help contain fluid layouts, it’s a simple implementation of media queries—nothing too advanced was happening. Responsive email, on the other hand, uses media queries to change the layout of emails, adjust the size of text, images, and buttons, and, in some cases, hide or even swap content between desktop and mobile devices.
                         </aside>
@@ -323,7 +314,7 @@
                     </section>
                     <section>
                         <h2>Photoshop</h2>
-
+                        <img src="img/welcome_email_first_pass.png">
                         <aside class="notes">
                             
                         </aside>
@@ -342,9 +333,6 @@
 
                 <!-- Slide 08 -->
                 <section>
-                    <section>
-                        <img src="img/welcome_email_first_pass.png">
-                    </section>
                     <section>
                         <img src="img/welcome_email_new.png">
                         <aside class="notes">
@@ -394,10 +382,11 @@
                 <section>
                     <section>
                         <h2>Tables</h2>
+                        <p>From <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">MDN</a>:</p>
                         <blockquote>
                             Note: Prior to the creation of CSS, HTML &lt;table&gt; elements were often used as a method for page layout. This usage has been discouraged since HTML 4, and the &lt;table&gt; element should not be used for layout purposes.
                         </blockquote>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">MDN</a>
+                        
                     </section>
                     <section>
                         <h2>Tables</h2>
@@ -421,6 +410,11 @@
                 <section>
                     <h2>Image Alternatives</h2>
                     <p>For browsers or clients that do not automatically display images! Alt="" or have a background color.</p>
+                </section>
+
+                <section>
+                    <h2>!important</h2>
+                    <a href="http://www.smashingmagazine.com/2010/11/02/the-important-css-declaration-how-and-when-to-use-it/">Smashing Magazine</a>
                 </section>
 
                 <section>
@@ -464,6 +458,12 @@
 
                 <section>
                     <h2>Device Pixel Ratio</h2>
+                    <pre><code data-trim contenteditable class="lang-css">
+@media  all and (min-device-pixel-ratio : 1.5), 
+        all and (-webkit-min-device-pixel-ratio: 1.5) {
+            // Retina device styles go here!
+        }
+                    </pre></code>
                     <aside class="notes">
                     </aside>
                 </section>
@@ -526,6 +526,7 @@
                         <h2>High Res Images for Retina</h2>
                         <img src="img/retina_img_issue.png">
                     </section>
+
                     <section>
                         <h3>The Problem</h3>
                         <p>Outlook 2007, 2010, 2013, and Outlook in IE don't allow HTML or CSS image sizing. Argh.</p>
@@ -534,6 +535,7 @@
                         <p>Replace &lt;img&gt; by setting a background-img style on the surrounding &lt;td&gt; and assigning display: none; on the &lt;img&gt;.</p>
                         <p><a href="https://www.campaignmonitor.com/guides/mobile/optimizing-images/">Campaign Monitor</a></p>
                     </section>
+
                     <section>
                         <pre><code data-trim contenteditable class="lang-css">
 @media all and (min-device-pixel-ratio : 1.5), 
@@ -591,6 +593,19 @@
                     <h1>RESOURCES</h1>
                 </section>
 
+                <section>
+                    <h2>Blogs</h2>
+                    <a href="https://litmus.com/blog/anatomy-mobile-email/anatomy-mobile-email-24-1000px">Litmus Anatomy of a Mobile Email</a>
+                </section>
+
+                <section>
+                    <h2>Templates</h2>
+                </section>
+
+                <section>
+                    <h2>Testing</h2>
+
+                </section>
 
                 <section id="transitions">
                     <h2>Transition Styles</h2>
