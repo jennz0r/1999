@@ -427,7 +427,7 @@
                     <section>
                         <h2>My Template</h2>
                         <a href="https://github.com/jennz0r/email-template/blob/master/genericTemplate.html">Code</a>
-                        <pre><code data-trim contenteditable>
+                        <pre><code data-trim contenteditable class="lang-html">
 
 <table width="100%">
     <tr>
@@ -500,18 +500,18 @@
                         <p>Super weird and only occurs occasionally.</p>
                     </section>
                     <section>
-                        <pre><code data-trim contenteditable>
-    <span class="playBadge">
-        <a href="http://hotpads.com/referral.htm"><img src="http://filenet.hotpads.com/images/email/android_badge_100px.png" alt="HotPads Android App" class="mobileBadge"></a>
-    </span>
+                        <pre><code data-trim contenteditable class="lang-html">
+<span class="playBadge">
+    <a href="http://hotpads.com/referral.htm"><img src="http://filenet.hotpads.com/images/email/android_badge_100px.png" alt="HotPads Android App" class="mobileBadge"></a>
+</span>
                         </pre></code>
-                        <p>vs.</p>
-                        <pre><code data-trim contenteditable>
-    <span class="playBadge">
-        <a href="http://hotpads.com/referral.htm">
-            <img src="http://filenet.hotpads.com/images/email/android_badge_100px.png" alt="HotPads Android App" class="mobileBadge">
-        </a>
-    </span>
+                        <p>VS.</p>
+                        <pre><code data-trim contenteditable class="lang-html">
+<span class="playBadge">
+    <a href="http://hotpads.com/referral.htm">
+        <img src="http://filenet.hotpads.com/images/email/android_badge_100px.png" alt="HotPads Android App" class="mobileBadge">
+    </a>
+</span>
                         </pre></code>
                     </section>
                 </section>
@@ -535,8 +535,10 @@
                         <p><a href="https://www.campaignmonitor.com/guides/mobile/optimizing-images/">Campaign Monitor</a></p>
                     </section>
                     <section>
-                        <pre><code data-trim contenteditable>
-@media all and (min-device-pixel-ratio : 1.5), all and (-webkit-min-device-pixel-ratio: 1.5) {
+                        <pre><code data-trim contenteditable class="lang-css">
+@media all and (min-device-pixel-ratio : 1.5), 
+    all and (-webkit-min-device-pixel-ratio: 1.5) {
+
     td[class="cautionBar"] {
         background-image: url('http://filenet.hotpads.com/images/email/warning.png');
         background-position: center;
@@ -545,19 +547,22 @@
         width: 30px; !important;
         height: 30px; !important;
     }
+
     td[class="cautionBar"] img {
         display: none;
     }
+
 }
                         </pre></code>
                         <br/>
-                        <pre><code data-trim contenteditable>
-<table><tr>
+                        <pre><code data-trim contenteditable class="lang-html">
+<table>
+    <tr>
         <td valign="middle" class="cautionBar">
-            <img src="http://filenet.hotpads.com/images/email/warning_30px.png"
-            width="30px" height="30px" style="float: left; padding-left: 5px;"/>
+            <img src="http://filenet.hotpads.com/images/email/warning_30px.png" width="30px" height="30px" style="float: left; padding-left: 5px;"/>
         </td>
-</tr></table>
+    </tr>
+</table>
                         </pre></code>
                     </section>
                 </section>
