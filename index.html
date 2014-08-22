@@ -1,370 +1,433 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
-		<title>Tonight We're Gonna Code Like It's 1999: Designing Responsive Emails</title>
-		<meta name="description" content="How to design responsive emails for mobile devices">
-		<meta name="author" content="Jennifer Wong">
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <head>
+        <meta charset="utf-8">
+        <title>Tonight We're Gonna Code Like It's 1999: Designing Responsive Emails</title>
+        <meta name="description" content="How to design responsive emails for mobile devices">
+        <meta name="author" content="Jennifer Wong">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/default.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-		<link rel="stylesheet" href="css/style.css">
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <link rel="stylesheet" href="css/style.css">
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
 
-	<body>
-		<div class="reveal">
-			<div class="slides">
+    <body>
+        <div class="reveal">
+            <div class="slides">
 
-			<!-- Title Slide -->
-				<section data-background="img/prince01b.jpg" data-transition="fade" data-background-transition="fade">
-					<h2>Tonight We're Gonna Code Like It's 1999</h2>
-					<h3>Creating Responsive Emails</h3>
-					<p>
-						<small>By <a href="http://mochimachine.org/">Jennifer Wong</a> / <a href="http://twitter.com/mybluewristband">@mybluewristband</a></small>
-					</p>
-				</section>
+            <!-- Title Slide -->
+                <section data-background="img/prince01b.jpg" data-transition="fade" data-background-transition="fade">
+                    <h2>Tonight We're Gonna Code Like It's 1999</h2>
+                    <h3>Creating Responsive Emails</h3>
+                    <p>
+                        <small>By <a href="http://mochimachine.org/">Jennifer Wong</a> / <a href="http://twitter.com/mybluewristband">@mybluewristband</a></small>
+                    </p>
+                </section>
 
-			<!-- Slide 01 -->
-				<section>
-					<section>
-						<h2>Who am I?</h2>
-						<p>
-							Once upon a time, I was civil engineer!
-						</p>
-						<img width="336" height="240" src="img/engineer.jpg" alt="engineer">
-						<p>
-							But I quickly became bored with the slow pace of projects.
-						</p>
-					</section>
-					<section>
-						<h2>Then I Decided</h2>
-						<p>
-							I wanted to be part of the Tech industry, so I started working as a "Community Specialist" for a "startup".
-						</p>
-						<img width="336" height="240" src="img/customerservice.jpg" alt="customer service">
-						<p>
-							Read: customer support.
-						</p>
-					</section>
-					<section>
-						<h2>I hated it</h2>
-						<p>
-							So I taught myself to code.
-						</p>
-					</section>
-					<section data-background="img/jake.gif" class="dark-font">
-						<h2>SUCCESS</h2>
-						<p>
-							I landed a job at <a href="http://hotpads.com/" target="_blank">HotPads</a> as a Web Developer and have been working there ever since.
-						</p>
-					</section>
-				</section>
+            <!-- Slide 01 -->
+                <section>
+                    <section>
+                        <h2>Who am I?</h2>
+                        <p>
+                            Once upon a time, I was civil engineer!
+                        </p>
+                        <img width="336" height="240" src="img/engineer.jpg" alt="engineer">
+                        <p>
+                            But I quickly became bored with the slow pace of projects.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Then I Decided</h2>
+                        <p>
+                            I wanted to be part of the Tech industry, so I started working as a "Community Specialist" for a "startup".
+                        </p>
+                        <img width="336" height="240" src="img/customerservice.jpg" alt="customer service">
+                        <p>
+                            Read: customer support.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>I hated it</h2>
+                        <p>
+                            So I taught myself to code.
+                        </p>
+                    </section>
+                    <section data-background="img/jake.gif" class="dark-font">
+                        <h2>SUCCESS</h2>
+                        <p>
+                            I landed a job at <a href="http://hotpads.com/" target="_blank">HotPads</a> as a Web Developer and have been working there ever since.
+                        </p>
+                    </section>
+                </section>
 
-				<!-- Slide 02 -->
-				<section>
-					<section>
-						<h2>Here we go</h2>
-						<p>
-							My first assignment was to redesign emails and make them mobile-friendly.
-						</p>
-					</section>
-					<section>
-						<h2>Oh crap</h2>
-						<p>
-							I quickly realized
-						</p>
-						<img src="img/selftaught.jpg" alt="I have no idea what I'm doing">
-						<p>
-							and emails are evil.
-						</p>
-					</section>
-				</section>
+                <!-- Slide 02 -->
+                <section>
+                    <section>
+                        <h2>Here we go</h2>
+                        <p>
+                            My first assignment was to redesign emails and make them mobile-friendly.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Oh crap</h2>
+                        <p>
+                            I quickly realized
+                        </p>
+                        <img src="img/selftaught.jpg" alt="I have no idea what I'm doing">
+                    </section>
+                    <section>
+                        <h2>Fortunately</h2>
+                        <p>
+                            I'm here to share all of my strategies and mistakes with you!
+                        </p>
+                        <img src="img/sharing.jpg">
+                    </section>
+                </section>
 
-				<!-- Slide 03 -->
-				<section data-transition="linear" data-background="#007777" data-background-transition="slide">
-					<h1>DESIGN</h1>
-				</section>
+                <!-- Slide 03 -->
+                <section>
+                    <h2>My Story</h2>
+                    <h4>Emails are evil.</h4>
+                    <ul>
+                        <li>Design
+                            <ul>
+                                <li>Research</li>
+                                <li>Assessment</li>
+                                <li>Planning</li>
+                            </ul>
+                        </li>
+                        <li>Code
+                            <ul>
+                                <li>Things I Learned Before</li>
+                                <li>Things I Learned During</li>
+                                <li>Things I Learned After</li>
+                            </ul>
+                        </li>
+                        <li>Resources
+                            <ul>
+                                <li>Blogs</li>
+                                <li>Templates</li>
+                                <li>Testing</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
 
-				<!-- Slide 04 -->
-				<section>
-					<section>
-						<h2>First Things First</h2>
-						<h3>Research!</h3>
-						<p>
-							My first email redesign victim was our Welcome email, so I started researching other companies' Welcome emails.
-						</p>
-						<aside class="notes">
-							I signed up for services and scoured my personal email to find examples of good and/or bad email designs.
-							A lot of it is pretty instinctual, but eventually I could pinpoint the highs and lows.
-						</aside>
-					</section>
-					<section>
-						<h2>Least Favorites</h2>
-						<ul>
-							<li class="fragment"><a href="http://cl.ly/image/0I22103Q0d0h" target="_blank">Lumi</a></li>
-							<li class="fragment"><a href="http://cl.ly/image/2t3A3o0u3N2I" target="_blank">HackerLeague</a></li>
-						</ul>
-						<aside class="notes">
-							All of these are super text heavy. I'm not going to read all that!
-							Lumi's calls to action are not noticeable and the email doesn't show how to unsubscribe.
-							HackerLeague's calls to action are repeated and don't use images where they make sense (Twitter - use an image!).
-						</aside>
-					</section>
-					<section>
-						<h2>Favorites</h2>
-						<ul>
-							<li class="fragment"><a href="http://cl.ly/image/031p0X3f0o1n" target="_blank">Creative Market</a></li>
-							<li class="fragment"><a href="http://cl.ly/image/0y141U381u2y" target="_blank">Creative Market</a></li>
-							<li class="fragment"><a href="http://ebm.cheetahmail.com/c/tag/hBTOjnAB7S7eaB7Vb8cNtlFUR.B7S7ea7V/doc.html?t_params=FNAME%3DJENNIFER%26FREQ_MEMBER_ID%3D123456789%26EMAIL%3Dblah%2540gmail.com&cm_mmc=emmkt-_-NotifEM-_-V1-_-view" target="_blank">DSW</a></li>
-						</ul>
-						<aside class="notes">
-							Creative Market makes sense because they're a designer focused website.
-							Their calls to action are obvious - Edit Profile or Open a Shop and they have beautiful image content to add a layer of interest.
-							DSW is so pro - they use just one image and font types for design features. Their calls to action are plentiful, but obvious, with the most important ones shown with highlights!
-						</aside>
-					</section>
-					<section>
-						<h2>Most Favoritest</h2>
-						<ul>
-							<li class="fragment"><a href="http://us5.campaign-archive1.com/?u=4109fdd323aaac7078eadaa8f&id=428592062f&e=988a1e2a6f" target="_blank">Radiolab</a></li>
-							<li class="fragment"><a href="http://us4.campaign-archive2.com/?u=9e8b6cadd22dfef20841a79fb&id=6b0b0ea0e5&e=e9d53fe639" target="_blank">indiegogo</a></li>
-						</ul>
-						<br/>
-						<br/>
-						<p>I know, I know, these are not welcome emails.</p>
-						<p>But they're just so pretty!</p>
-						<aside class="notes">
-							Radiolab does a great job with color interest as well as making a few key calls to action super obvious.
-							Indiegogo is great at using awesome images and making their calls to action brightly colored, consistent, and obvious.
-						</aside>
-					</section>
-					<section>
-						<h2>Takeaways</h2>
-						<ul>
-							<li class="fragment">Text light</li>
-							<li class="fragment">Image heavy</li>
-							<li class="fragment">Huge top anchored logo</li>
-							<li class="fragment">Full width = no no</li>
-						</ul>
-						<aside class="notes">
-							* Logo similar to website
-							* To ensure you don't have to read across entire page
-						</aside>
-					</section>
-				</section>
+                <!-- Slide 04 -->
+                <section data-transition="linear" data-background="#007777" data-background-transition="slide">
+                    <h1>DESIGN</h1>
+                </section>
 
-				<!-- Slide 05 -->
-				<section>
-					<section>
-						<h2>Assessment</h2>
-						<h3>What am I working with?</h3>
-					</section>
-					<section>
-						<h2>OMG</h2>
-						<img src="img/welcome_email_old.png">
-						<aside class="notes">
-							Why is the logo where it is?
-							Why is the spacing of lines so weirdly inconsistent?
-							Wait, where do you unsubscribe?
-						</aside>
-					</section>
-					<section>
-						<h2>Wow</h2>
-						<img src="img/doge.png">
-					</section>
-				</section>
-				
-				<!-- Slide 06 -->
-				<section>
-					<section>
-						<h2>Planning</h2>
-						<h3>What am I making?</h3>
-					</section>
-					<section>
-						<h2>Goals</h2>
-						<ul>
-							<li>Consistency</li>
-							<li>Brand Awareness</li>
-						</ul>
-						<aside class="notes">
-							Our emails lacked consistency 
-							Consistency begets brand awareness - when customers see something that's recognizable, they tend to associate it with the brand.
-						</aside>
-					</section>
-					<section>
-						<h2>Responsiveness</h2>
-						<ul>
-							<li>Scalable</li>
-							<li>Fluid</li>
-							<li>Responsive</li>
-						</ul>
-						<br/>
-						<br/>
-						<q><a href="https://litmus.com/blog/defining-and-understanding-mobile-email-approaches" target="_blank">Litmus Article</a></q>
-					</section>
-					<section>
-						<h2>Scalable</h2>
-						<img src="img/scalable.png">
-						<aside class="notes">
-							
-						</aside>
-					</section>
-					<section>
-						<h2>Fluid</h2>
-						<img src="img/fluid.png">
-						<aside class="notes">
-							
-						</aside>
-					</section>
-					<section>
-						<h2>Responsive</h2>
-						<img src="img/responsive.png">
-						<aside class="notes">
-							
-						</aside>
-					</section>
-					<section>
-						<h2>Pre-Made Templates</h2>
-						<p>There are a LOT of options.</p>
-						<img src="img/all_the_things.png">
-						<p>... which I'll talk about <a href="#/11/1">a bit later</a>.</p>
-						<aside class="notes">
-							Do you want one? Do you need one?
-						</aside>
-					</section>
-					<section>
-						<p>I used none.</p>
-						<img src="img/all_the_things_no.png">
-						<aside class="notes">
-							Our emails hadn't been updated in over five years.
-							I had all the time in the world to do these emails right.
-						</aside>
-					</section>
-					<section>
-						<h2>Sketching</h2>
-						<img width="460" src="img/sketch_01.png" class="img-float-left">
-						<img width="460" src="img/sketch_02.png" class="img-float-left">
-						<aside class="notes">
-							If I've learned anything from UX, I learned that sketching can be amazingly helpful.
-					</section>
-					<section>
-						<h2>Photoshop</h2>
+                <!-- Slide 05 -->
+                <section>
+                    <section>
+                        <h2>First Things First</h2>
+                        <h3>Research!</h3>
+                        <p>
+                            My first email redesign victim was our Welcome email, so I started researching other companies' Welcome emails.
+                        </p>
+                        <aside class="notes">
+                            I signed up for services and scoured my personal email to find examples of good and/or bad email designs.
+                            A lot of it is pretty instinctual, but eventually I could pinpoint the highs and lows.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Least Favorites</h2>
+                        <ul>
+                            <li class="fragment"><a href="http://cl.ly/image/0I22103Q0d0h" target="_blank">Lumi</a></li>
+                            <li class="fragment"><a href="http://cl.ly/image/2t3A3o0u3N2I" target="_blank">HackerLeague</a></li>
+                        </ul>
+                        <aside class="notes">
+                            All of these are super text heavy. I'm not going to read all that!
+                            Lumi's calls to action are not noticeable and the email doesn't show how to unsubscribe.
+                            HackerLeague's calls to action are repeated and don't use images where they make sense (Twitter - use an image!).
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Favorites</h2>
+                        <ul>
+                            <li class="fragment"><a href="http://cl.ly/image/031p0X3f0o1n" target="_blank">Creative Market</a></li>
+                            <li class="fragment"><a href="http://cl.ly/image/0y141U381u2y" target="_blank">Creative Market</a></li>
+                            <li class="fragment"><a href="http://ebm.cheetahmail.com/c/tag/hBTOjnAB7S7eaB7Vb8cNtlFUR.B7S7ea7V/doc.html?t_params=FNAME%3DJENNIFER%26FREQ_MEMBER_ID%3D123456789%26EMAIL%3Dblah%2540gmail.com&cm_mmc=emmkt-_-NotifEM-_-V1-_-view" target="_blank">DSW</a></li>
+                        </ul>
+                        <aside class="notes">
+                            Creative Market makes sense because they're a designer focused website.
+                            Their calls to action are obvious - Edit Profile or Open a Shop and they have beautiful image content to add a layer of interest.
+                            DSW is so pro - they use just one image and font types for design features. Their calls to action are plentiful, but obvious, with the most important ones shown with highlights!
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Most Favoritest</h2>
+                        <ul>
+                            <li class="fragment"><a href="http://us5.campaign-archive1.com/?u=4109fdd323aaac7078eadaa8f&id=428592062f&e=988a1e2a6f" target="_blank">Radiolab</a></li>
+                            <li class="fragment"><a href="http://us4.campaign-archive2.com/?u=9e8b6cadd22dfef20841a79fb&id=6b0b0ea0e5&e=e9d53fe639" target="_blank">indiegogo</a></li>
+                        </ul>
+                        <br/>
+                        <br/>
+                        <p>I know, I know, these are not welcome emails.</p>
+                        <p>But they're just so pretty!</p>
+                        <aside class="notes">
+                            Radiolab does a great job with color interest as well as making a few key calls to action super obvious.
+                            Indiegogo is great at using awesome images and making their calls to action brightly colored, consistent, and obvious.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Takeaways</h2>
+                        <ul>
+                            <li class="fragment">Text light</li>
+                            <li class="fragment">Image heavy</li>
+                            <li class="fragment">Huge top anchored logo</li>
+                            <li class="fragment">Full width = no no</li>
+                        </ul>
+                        <aside class="notes">
+                            * Logo similar to website
+                            * To ensure you don't have to read across entire page
+                        </aside>
+                    </section>
+                </section>
 
-						<aside class="notes">
-							
-						</aside>
-					</section>
-					<section>
-						<h2>Images</h2>
-						<h3>Rule of Thumbs</h3>
-						<p>Minimum touchable area: 44px by 44px</p>
-						<p><a href="http://www.smashingmagazine.com/2012/02/21/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/">Smashing Magazine: Touchscreen Target Sizes</a></p>
-						<p><a href="http://pugetworks.com/blog/2012/02/minimum-touchable-area-on-mobile-devices/">Puget Works: Minimum Touchable Areas</a></p>
-					</section>
-					<aside class="notes">
-						Based on the original iPhone Human Interface Guidelines for the first iPhone, which no longer exist.
-					</aside>
-				</section>
+                <!-- Slide 06 -->
+                <section>
+                    <section>
+                        <h2>Assessment</h2>
+                        <h3>What am I working with?</h3>
+                    </section>
+                    <section>
+                        <h2>OMG</h2>
+                        <img src="img/welcome_email_old.png">
+                        <aside class="notes">
+                            Why is the logo where it is?
+                            Why is the spacing of lines so weirdly inconsistent?
+                            Wait, where do you unsubscribe?
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Wow</h2>
+                        <img src="img/doge.png">
+                    </section>
+                </section>
+                
+                <!-- Slide 07 -->
+                <section>
+                    <section>
+                        <h2>Planning</h2>
+                        <h3>What am I making?</h3>
+                    </section>
+                    <section>
+                        <h2>Goals</h2>
+                        <ul>
+                            <li>Consistency</li>
+                            <li>Brand Awareness</li>
+                        </ul>
+                        <aside class="notes">
+                            Our emails lacked consistency 
+                            Consistency begets brand awareness - when customers see something that's recognizable, they tend to associate it with the brand.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Responsiveness</h2>
+                        <ul>
+                            <li>Scalable</li>
+                            <li>Fluid</li>
+                            <li>Responsive</li>
+                        </ul>
+                        <br/>
+                        <br/>
+                        <q><a href="https://litmus.com/blog/defining-and-understanding-mobile-email-approaches" target="_blank">Litmus Article</a></q>
+                    </section>
+                    <section>
+                        <h2>Scalable</h2>
+                        <img src="img/scalable.png">
+                        <p>
+                            Perfect for:
+                            Testing the mobile waters
+                            Reliable rendering across clients and devices
+                            Teams with limited resources
+                        </p>
+                        <aside class="notes">
+                            A simple (usually single-column) layout that scales down nicely.
+                            Large text that is readable on screens of all sizes.
+                            Large, touch-friendly calls-to-action.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Fluid</h2>
+                        <img src="img/fluid.png">
+                        <p>
+                            Perfect for:
+                            Simple layouts
+                            Emails with mostly text that can flow
+                            Teams with limited resources
+                        </p>
+                        <aside class="notes">
+                            Fluid emails use percentage-based sizing to make the width of tables and images adapt to the screen size on which they are viewed, similar to what is known as “liquid” layouts on the web. Fluid emails are similar to scalable ones, in that they don’t purposefully alter the layout or content of an email, but they have the added benefit of having content “flow” to fill space on the screen. For this reason, fluid designs typically work best for text-heavy layouts since there’s less control over how copy and images relate to each other.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Responsive</h2>
+                        <img src="img/responsive.png">
+                        <p>
+                            Perfect for:
+                            Large mobile audiences
+                            The most control over layout
+                            Teams with knowledge of media queries
+                        </p>
+                        <aside class="notes">
+                            Responsive email takes everything from scalable and fluid emails and builds on it by adding more control via CSS media queries. While media queries are also used to help contain fluid layouts, it’s a simple implementation of media queries—nothing too advanced was happening. Responsive email, on the other hand, uses media queries to change the layout of emails, adjust the size of text, images, and buttons, and, in some cases, hide or even swap content between desktop and mobile devices.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Pre-Made Templates</h2>
+                        <p>There are a LOT of options.</p>
+                        <img src="img/all_the_things.png">
+                        <p>... which I'll talk about <a href="#/11/1">a bit later</a>.</p>
+                        <aside class="notes">
+                            Do you want one? Do you need one?
+                        </aside>
+                    </section>
+                    <section>
+                        <p>I used none.</p>
+                        <img src="img/all_the_things_no.png">
+                        <aside class="notes">
+                            Our emails hadn't been updated in over five years.
+                            I had all the time in the world to do these emails right.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Sketching</h2>
+                        <img width="460" src="img/sketch_01.png" class="img-float-left">
+                        <img width="460" src="img/sketch_02.png" class="img-float-left">
+                        <aside class="notes">
+                            If I've learned anything from UX, I learned that sketching can be amazingly helpful.
+                    </section>
+                    <section>
+                        <h2>Photoshop</h2>
 
-				<!-- Slide 07 -->
-				<section>
-					<section>
-						<img src="img/welcome_email_first_pass.png">
-					</section>
-					<section>
-						<img src="img/welcome_email_new.png">
-						<aside class="notes">
-							So pretty!
-							I left the copy alone.
-							I mimicked the look of our website with the image footer.
-						</aside>
-					</section>
-					<section>
-						<h2>Aesthetic Prince Would Approve of</h2>
-						<img src="img/prince01.jpg">
-					</section>
-					<section>
-						<h2>Just for Reference</h2>
-						<img width="460" src="img/welcome_email_old.png" class="img-float-left">
-						<img width="460" src="img/welcome_email_new.png" class="img-float-left">
-					</section>
-				</section>
+                        <aside class="notes">
+                            
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Images</h2>
+                        <h3>Rule of Thumbs</h3>
+                        <p>Minimum touchable area: 44px by 44px</p>
+                        <p><a href="http://www.smashingmagazine.com/2012/02/21/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/">Smashing Magazine: Touchscreen Target Sizes</a></p>
+                        <p><a href="http://pugetworks.com/blog/2012/02/minimum-touchable-area-on-mobile-devices/">Puget Works: Minimum Touchable Areas</a></p>
+                    </section>
+                    <aside class="notes">
+                        Based on the original iPhone Human Interface Guidelines for the first iPhone, which no longer exist.
+                    </aside>
+                </section>
 
-				<!-- Slide 08 -->
-				<section data-transition="linear" data-background="#007777" data-background-transition="slide">
-					<h1>CODE</h1>
-				</section>
+                <!-- Slide 08 -->
+                <section>
+                    <section>
+                        <img src="img/welcome_email_first_pass.png">
+                    </section>
+                    <section>
+                        <img src="img/welcome_email_new.png">
+                        <aside class="notes">
+                            So pretty!
+                            I left the copy alone.
+                            I mimicked the look of our website with the image footer.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Aesthetic Prince Would Approve of</h2>
+                        <img src="img/prince01.jpg">
+                    </section>
+                    <section>
+                        <h2>Just for Reference</h2>
+                        <img width="460" src="img/welcome_email_old.png" class="img-float-left">
+                        <img width="460" src="img/welcome_email_new.png" class="img-float-left">
+                    </section>
+                </section>
 
-				<!-- Slide 09 -->
-				<section>
-					<h2>Java Templates</h2>
-					<p>
-						<a href="https://velocity.apache.org/engine/releases/velocity-1.5/user-guide.html" target="_blank">Velocity</a> vs <a href="http://en.wikipedia.org/wiki/JavaServer_Pages" target="_blank">JavaServer Page (JSP)</a>
-					</p>
-					<a href="img/velocity.png" target="_blank">
-						<img width="460" src="img/velocity.png" class="img-float-left">
-					</a>
-					<a href="img/jsp.png" target="_blank">
-						<img width="460" src="img/jsp.png" class="img-float-left">
-					</a>
+                <!-- Slide 09 -->
+                <section data-transition="linear" data-background="#007777" data-background-transition="slide">
+                    <h1>CODE</h1>
+                </section>
 
-					<aside class="notes">
-						This was my first time seeing Java, let alone templates for Java. And I was thrust into the wild world of Model View Controller. I had to translate the Velocity templates into JSPs. You can see why HotPads decided to go with JSP - the delineation between template language and HTML is much clearer. This will likely not be a concern for you, but now you'll understand that the weirdnesses in my HTML are due to JSP.
-					</aside>
-				</section>
+                <!-- Slide 10 -->
+                <section>
+                    <h2>Java Templates</h2>
+                    <p>
+                        <a href="https://velocity.apache.org/engine/releases/velocity-1.5/user-guide.html" target="_blank">Velocity</a> vs <a href="http://en.wikipedia.org/wiki/JavaServer_Pages" target="_blank">JavaServer Page (JSP)</a>
+                    </p>
+                    <a href="img/velocity.png" target="_blank">
+                        <img width="460" src="img/velocity.png" class="img-float-left">
+                    </a>
+                    <a href="img/jsp.png" target="_blank">
+                        <img width="460" src="img/jsp.png" class="img-float-left">
+                    </a>
 
-				<section data-background="#4d7e65">
-					<h2>Things I Learned Before I Started</h2>
-				</section>
+                    <aside class="notes">
+                        This was my first time seeing Java, let alone templates for Java. And I was thrust into the wild world of Model View Controller. I had to translate the Velocity templates into JSPs. You can see why HotPads decided to go with JSP - the delineation between template language and HTML is much clearer. This will likely not be a concern for you, but now you'll understand that the weirdnesses in my HTML are due to JSP.
+                    </aside>
+                </section>
 
-				<section>
-					<h2>Tables</h2>
-					<p>They are neither block nor inline.</p>
-					<img src="img/wat.jpg">
-					<p>This means you have to specify them to display as block or Chrome will ignore your max-width style.</p>
-				</section>
+                <section data-background="#4d7e65">
+                    <h2>Things I Learned Before I Started</h2>
+                </section>
 
-				<section>
-					<h2>Inline Styles</h2>
-					<p>Blah</p>
-				</section>
+                <section>
+                    <section>
+                        <h2>Tables</h2>
+                        <blockquote>
+                            Note: Prior to the creation of CSS, HTML &lt;table&gt; elements were often used as a method for page layout. This usage has been discouraged since HTML 4, and the &lt;table&gt; element should not be used for layout purposes.
+                        </blockquote>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">MDN</a>
+                    </section>
+                    <section>
+                        <h2>Tables</h2>
+                        <p>They are neither block nor inline.</p>
+                        <img src="img/wat.jpg">
+                        <p>This means you have to specify them to display as block or Chrome will ignore your max-width style.</p>
+                    </section>
+                </section>
 
-				<section>
-					<h2>Width</h2>
-					<p>600px</p>
-				</section>
+                <section>
+                    <h2>Inline Styles</h2>
+                    <p>Blah</p>
+                </section>
 
-				<section>
-					<h2>Image Alt</h2>
-					<p>For browsers or clients that do not automatically display images!</p>
-				</section>
+                <section>
+                    <h2>Max Width</h2>
+                    <p>600px based on email clients' preview panes, but also with maximum readability (while avoiding scrolling)</p>
+                    <img src="img/no_max_width.png">
+                </section>
 
-				<section>
-					<section>
-						<h2>My Template</h2>
-						<a href="https://github.com/jennz0r/email-template/blob/master/genericTemplate.html">Code</a>
-						<pre><code data-trim contenteditable>
+                <section>
+                    <h2>Image Alternatives</h2>
+                    <p>For browsers or clients that do not automatically display images! Alt="" or have a background color.</p>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>My Template</h2>
+                        <a href="https://github.com/jennz0r/email-template/blob/master/genericTemplate.html">Code</a>
+                        <pre><code data-trim contenteditable>
 
 <table width="100%">
     <tr>
@@ -380,193 +443,275 @@
     </tr>
 </table>
 
-						</code></pre>
-					</section>
-					<section>
-						<h2>Why Template?</h2>
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Why Template?</h2>
+                        <ul>
+                            <li>Keeping it DRY</li>
+                            <li>Blah</li>
+                        </ul>
+                        <aside class="notes">
+                            Show different email templates to display consistency, etc.
+                        </aside>
+                    </section>
 
-					</section>
-				</section>
+                </section>
 
-				<section data-background="#4d7e65">
-					<h2>Things I Learned While Coding</h2>
-				</section>
+                <section data-background="#4d7e65">
+                    <h2>Things I Learned While Coding</h2>
+                </section>
 
-				<section>
-					<h2>Device Pixel Ratio</h2>
-				</section>
+                <section>
+                    <h2>Device Pixel Ratio</h2>
+                    <aside class="notes">
+                    </aside>
+                </section>
 
-				<section>
-					<h2>Media Queries</h2>
-				</section>
+                <section>
+                    <h2>Media Queries</h2>
+                    <aside class="notes">
+                    </aside>
+                </section>
 
-				<section>
-					<section>
-						<h2>Line Height</h2>
-						<img src="img/line_height_issue.png">
-					</section>
-					<section>
-						<p>i just sent you the test i'm now trying to figure out why the blue border on the bottom is extending 3px beyond the bottom of the footer image<br/>
-						that spacing is weird, it's due to line-height you can either set line-height: 0 on the surrounding td or you can set the image to display: block, so it doesn't interact with line heights</p>
-					</section>
-				</section>
+                <section>
+                    <section>
+                        <h2>Line Height</h2>
+                        <img src="img/line_height_issue.png">
+                        <aside class="notes">
+                        </aside>
+                    </section>
+                    <section>
+                        <p>i just sent you the test i'm now trying to figure out why the blue border on the bottom is extending 3px beyond the bottom of the footer image<br/>
+                        that spacing is weird, it's due to line-height you can either set line-height: 0 on the surrounding td or you can set the image to display: block, so it doesn't interact with line heights</p>
+                    </section>
+                </section>
 
-				<section>
-					<h2>Inline Overwriting Media Query (Padding)</h2>
-				</section>
+                <section>
+                    <h2>Inline Overwriting Media Query (Padding)</h2>
+                    <aside class="notes">
+                    </aside>
+                </section>
 
-				<section data-background="#4d7e65">
-					<h2>Things I Learned After Release</h2>
-					<h4>Oops</h4>
-				</section>
+                <section>
+                    <section>
+                        <h2>&lt;Img&gt; Within &lt;a&gt;</h2>
+                        <img src="img/lurk.jpg">
+                        <p>Super weird and only occurs occasionally.</p>
+                    </section>
+                    <section>
+                        <pre><code data-trim contenteditable>
+    <span class="playBadge">
+        <a href="http://hotpads.com/referral.htm"><img src="http://filenet.hotpads.com/images/email/android_badge_100px.png" alt="HotPads Android App" class="mobileBadge"></a>
+    </span>
+                        </pre></code>
+                        <p>vs.</p>
+                        <pre><code data-trim contenteditable>
+    <span class="playBadge">
+        <a href="http://hotpads.com/referral.htm">
+            <img src="http://filenet.hotpads.com/images/email/android_badge_100px.png" alt="HotPads Android App" class="mobileBadge">
+        </a>
+    </span>
+                        </pre></code>
+                    </section>
+                </section>
 
-				<section>
-					<section>
-						<h2>High Res Images for Retina</h2>
-						<img src="img/retina_img_issue.png">
-					</section>
-					<section>
-						<p>The problem: Outlook 2007, 2010, 2013, and Outlook in Internet Explorer do not allow adjustment of image sizes via HTML or CSS.</p>
-						<p>The solution: maybe we could have the img be the real size and have a responsive style block that checks the screen dpi and replaces the img with a high resolution one when necessary</p>
-						<p><a href="https://www.campaignmonitor.com/guides/mobile/optimizing-images/">Campaign Monitor</a></p>
-					</section>
-				</section>
+                <section data-background="#4d7e65">
+                    <h2>Things I Learned After Release</h2>
+                    <h4>Oops</h4>
+                </section>
 
-				<section>
-					<h2>Outlook 2007, 2010, & 2013</h2>
-					<p><a href="http://stylecampaign.com/blog/2011/08/using-media-to-bypass-max-width/">Style Campaign Max Width Bypass</a></p>
-				</section>
+                <section>
+                    <section>
+                        <h2>High Res Images for Retina</h2>
+                        <img src="img/retina_img_issue.png">
+                    </section>
+                    <section>
+                        <h3>The Problem</h3>
+                        <p>Outlook 2007, 2010, 2013, and Outlook in IE don't allow HTML or CSS image sizing. Argh.</p>
+                        <br/>
+                        <h3>The Solution</h3>
+                        <p>Replace &lt;img&gt; by setting a background-img style on the surrounding &lt;td&gt; and assigning display: none; on the &lt;img&gt;.</p>
+                        <p><a href="https://www.campaignmonitor.com/guides/mobile/optimizing-images/">Campaign Monitor</a></p>
+                    </section>
+                    <section>
+                        <pre><code data-trim contenteditable>
+@media all and (min-device-pixel-ratio : 1.5), all and (-webkit-min-device-pixel-ratio: 1.5) {
+    td[class="cautionBar"] {
+        background-image: url('http://filenet.hotpads.com/images/email/warning.png');
+        background-position: center;
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+        width: 30px; !important;
+        height: 30px; !important;
+    }
+    td[class="cautionBar"] img {
+        display: none;
+    }
+}
+                        </pre></code>
+                        <br/>
+                        <pre><code data-trim contenteditable>
+<table><tr>
+        <td valign="middle" class="cautionBar">
+            <img src="http://filenet.hotpads.com/images/email/warning_30px.png"
+            width="30px" height="30px" style="float: left; padding-left: 5px;"/>
+        </td>
+</tr></table>
+                        </pre></code>
+                    </section>
+                </section>
 
-				<section data-transition="linear" data-background="#007777" data-background-transition="slide">
-					<h1>RESOURCES</h1>
-				</section>
+                <section>
+                    <h2>Outlook 2007, 2010, & 2013</h2>
+                    <p><a href="http://stylecampaign.com/blog/2011/08/using-media-to-bypass-max-width/">Style Campaign Max Width Bypass</a></p>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Gmail</h2>
+                        <p>Ignores &lt;a&gt; color styles in the &lt;head&gt;.</p>
+                        <p>You have to style <em>each and every</em> &lt;a&gt; inline.</p>
+                        <img src="img/what_the_what.gif">
+                    </section>
+                    <section>
+                        <h2>Gmail</h2>
+                        <p><em>And</em> "#000", "#000000", or "black" are not allowed for &lt;a&gt; <em>anywhere</em>.</p>
+                        <p>But you shouldn't for accessbility's sake anyway!</p>
+                        <a href="http://www.emailonacid.com/blog/details/C13/12_things_you_must_know_when_developing_for_gmail_and_gmail_mobile_apps">Email On Acid Tips</a>
+                    </section>
+                </section>
+
+                <section data-transition="linear" data-background="#007777" data-background-transition="slide">
+                    <h1>RESOURCES</h1>
+                </section>
 
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
+                <section id="transitions">
+                    <h2>Transition Styles</h2>
+                    <p>
+                        You can select from different transitions, like: <br>
+                        <a href="?transition=cube#/transitions">Cube</a> -
+                        <a href="?transition=page#/transitions">Page</a> -
+                        <a href="?transition=concave#/transitions">Concave</a> -
+                        <a href="?transition=zoom#/transitions">Zoom</a> -
+                        <a href="?transition=linear#/transitions">Linear</a> -
+                        <a href="?transition=fade#/transitions">Fade</a> -
+                        <a href="?transition=none#/transitions">None</a> -
+                        <a href="?#/transitions">Default</a>
+                    </p>
+                </section>
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon#/themes">Moon</a> -
-						<a href="?theme=solarized#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
+                <section id="themes">
+                    <h2>Themes</h2>
+                    <p>
+                        Reveal.js comes with a few themes built in: <br>
+                        <a href="?#/themes">Default</a> -
+                        <a href="?theme=sky#/themes">Sky</a> -
+                        <a href="?theme=beige#/themes">Beige</a> -
+                        <a href="?theme=simple#/themes">Simple</a> -
+                        <a href="?theme=serif#/themes">Serif</a> -
+                        <a href="?theme=night#/themes">Night</a> <br>
+                        <a href="?theme=moon#/themes">Moon</a> -
+                        <a href="?theme=solarized#/themes">Solarized</a>
+                    </p>
+                    <p>
+                        <small>
+                            * Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
+                        </small>
+                    </p>
+                </section>
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
+                <section>
+                    <h2>Global State</h2>
+                    <p>
+                        Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+                        will be added as a class to the document element when the slide is open. This lets you
+                        apply broader style changes, like switching the background.
+                    </p>
+                </section>
 
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+                <section data-state="customevent">
+                    <h2>Custom Events</h2>
+                    <p>
+                        Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+                    </p>
+                    <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
 Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
+    console.log( '"customevent" has fired' );
 } );
-					</code></pre>
-				</section>
+                    </code></pre>
+                </section>
 
-				<section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
-				</section>
+                <section>
+                    <section>
+                        <h2>Fragment Styles</h2>
+                        <p>There's a few styles of fragments, like:</p>
+                        <p class="fragment grow">grow</p>
+                        <p class="fragment shrink">shrink</p>
+                        <p class="fragment roll-in">roll-in</p>
+                        <p class="fragment fade-out">fade-out</p>
+                        <p class="fragment highlight-red">highlight-red</p>
+                        <p class="fragment highlight-green">highlight-green</p>
+                        <p class="fragment highlight-blue">highlight-blue</p>
+                        <p class="fragment current-visible">current-visible</p>
+                        <p class="fragment highlight-current-blue">highlight-current-blue</p>
+                    </section>
+                </section>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
+                <section>
+                    <h2>Export to PDF</h2>
+                    <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
+                    <iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
+                    <script>
+                        document.getElementById('slideshare').attributeName = 'allowfullscreen';
+                    </script>
+                </section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
+                <section>
+                    <h2>Take a Moment</h2>
+                    <p>
+                        Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
+                        during a presentation.
+                    </p>
+                </section>
 
-			</div>
+            </div>
 
-		</div>
+        </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
 
-		<script>
+        <script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
 
-		</script>
+        </script>
 
-	</body>
+    </body>
 </html>
