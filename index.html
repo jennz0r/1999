@@ -361,9 +361,11 @@
                     <section>
                         <img src="img/welcome_email_new.png">
                         <aside class="notes">
-                            So pretty!
-                            I left the copy alone.
-                            I mimicked the look of our website with the image footer.
+                            <ul>
+                                <li>So pretty!</li>
+                                <li>I left the copy alone.</li>
+                                <li>I mimicked the look of our website with the image footer.</li>
+                            </ul>
                         </aside>
                     </section>
                     <section>
@@ -394,7 +396,6 @@
                     <a href="img/jsp.png" target="_blank">
                         <img width="460" src="img/jsp.png" class="img-float-left">
                     </a>
-
                     <aside class="notes">
                         This was my first time seeing Java, let alone templates for Java. And I was thrust into the wild world of Model View Controller. I had to translate the Velocity templates into JSPs. You can see why HotPads decided to go with JSP - the delineation between template language and HTML is much clearer. This will likely not be a concern for you, but now you'll understand that the weirdnesses in my HTML are due to JSP.
                     </aside>
@@ -407,23 +408,39 @@
                 <section>
                     <section>
                         <h2>Tables</h2>
-                        <p>From <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">MDN</a>:</p>
+                        <img src="img/winter.jpg">
+                        <p>are coming.</p>
+                    </section>
+                    <section>
+                        <h2><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">MDN</a> says:</h2>
                         <blockquote>
-                            Note: Prior to the creation of CSS, HTML &lt;table&gt; elements were often used as a method for page layout. This usage has been discouraged since HTML 4, and the &lt;table&gt; element should not be used for layout purposes.
+                            "Note: Prior to the creation of CSS, HTML &lt;table&gt; elements were often used as a method for page layout. This usage has been discouraged since HTML 4, and the &lt;table&gt; element should not be used for layout purposes."
                         </blockquote>
-                        
+                        <aside class="notes">
+                            <ul>
+                                <li>MDN characterizes table elements as block level.</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Emails say</h2>
+                        <blockquote>"LOL"</blockquote>
                     </section>
                     <section>
                         <h2>Tables</h2>
                         <p>They are neither block nor inline.</p>
                         <img src="img/wat.jpg">
-                        <p>This means you have to specify them to display as block or Chrome will ignore your max-width style.</p>
+                        <p>Their default CSS is &nbsp;<em>display: table;</em></p>
+                        <p>This means you have to specify &nbsp;<em>display: block;</em>&nbsp; or Chrome will ignore your max-width style.</p>
                     </section>
                 </section>
 
                 <section>
                     <h2>Inline Styles</h2>
-                    <p>Blah</p>
+                    <p>You've gotta use 'em because email basically supports nothing.</p>
+                    <p>Outlook and Gmail pretty much hate you.</p>
+
+                    <p>See <a href="https://www.campaignmonitor.com/css/">Campaign Monitor CSS</a> page.</p>
                 </section>
 
                 <section>
@@ -434,7 +451,13 @@
 
                 <section>
                     <h2>Image Alternatives</h2>
-                    <p>For browsers or clients that do not automatically display images! Alt="" or have a background color.</p>
+                    <p>For browsers or clients that do not automatically display images, always have <em>alt=" "</em> or a background color.</p>
+                    <p>This is also great for accessibility!</p>
+                    <aside class="notes">
+                        <ul>
+                            <li>Background color example: HotPads footer image has a light blue background as backup.</li>
+                        </ul>
+                    </aside>
                 </section>
 
                 <section>
