@@ -112,23 +112,23 @@
                     <ul>
                         <li>Design
                             <ul>
-                                <li>Research</li>
-                                <li>Assessment</li>
-                                <li>Planning</li>
+                                <li class="list-small-font">Research</li>
+                                <li class="list-small-font">Assessment</li>
+                                <li class="list-small-font">Planning</li>
                             </ul>
                         </li>
                         <li>Code
                             <ul>
-                                <li>Things I Learned Before</li>
-                                <li>Things I Learned During</li>
-                                <li>Things I Learned After</li>
+                                <li class="list-small-font">Things I Learned Before</li>
+                                <li class="list-small-font">Things I Learned During</li>
+                                <li class="list-small-font">Things I Learned After</li>
                             </ul>
                         </li>
                         <li>Resources
                             <ul>
-                                <li>Blogs</li>
-                                <li>Templates</li>
-                                <li>Testing</li>
+                                <li class="list-small-font">Blogs</li>
+                                <li class="list-small-font">Templates</li>
+                                <li class="list-small-font">Testing</li>
                             </ul>
                         </li>
                     </ul>
@@ -399,7 +399,7 @@
                     <aside class="notes">
                         <ul>
                             <li>Translate the Velocity templates into JSPs.</li>
-                            <li>Delineation between template language and HTML is much clearer.</li>
+                            <li>Common syntax between our web pages and emails.</li>
                             <li>This will likely not be a concern for you, but now you'll understand that the weirdnesses in my HTML are due to JSP.</li>
                         </ul>
                     </aside>
@@ -416,7 +416,7 @@
                         <p>are coming.</p>
                     </section>
                     <section>
-                        <h2><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">MDN</a> says:</h2>
+                        <h2><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank">MDN</a> says:</h2>
                         <blockquote>
                             "Note: Prior to the creation of CSS, HTML &lt;table&gt; elements were often used as a method for page layout. This usage has been discouraged since HTML 4, and the &lt;table&gt; element should not be used for layout purposes."
                         </blockquote>
@@ -435,55 +435,105 @@
                         <h2>Tables</h2>
                         <p>They are neither block nor inline.</p>
                         <img src="img/wat.jpg">
-                        <p>Their default CSS is &nbsp;<em>display: table;</em></p>
-                        <p>This means you have to specify &nbsp;<em>display: block;</em>&nbsp; or Chrome will ignore your max-width style.</p>
+                        <p>&lt;table&gt; default CSS is &nbsp;<em>display: table;</em></p>
+                        <p>Specify &nbsp;<em>display: block;</em>&nbsp; or Chrome will ignore <em>max-width</em>!</p>
                     </section>
                 </section>
 
                 <section>
-                    <h2>Inline Styles</h2>
-                    <p>You've gotta use 'em because email basically supports no CSS.</p>
-                    <p>Outlook and Gmail hate you.</p>
-                    <p>See <a href="https://www.campaignmonitor.com/css/">Campaign Monitor CSS</a> page.</p>
-                    <aside class="notes">
-                        <ul>
-                            <li>There are actually tools that put your CSS inline for you!</li>
-                        </ul>
-                    </aside>
+                    <section>
+                        <h2>Inline Styles</h2>
+                        <p>You've gotta use 'em because email basically supports no CSS.</p>
+                        <p>Outlook and Gmail hate you.</p>
+                        <p>See <a href="https://www.campaignmonitor.com/css/" target="_blank">Campaign Monitor CSS</a> page.</p>
+                    </section>
+                    <section>
+                        <h2>Inline Styles</h2>
+                        <p>You will, unfortunately, be doing a lot of this:</p>
+                        <pre><code data-trim contenteditable class="lang-html">
+<table cellpadding="0" cellspacing="0" border="0" align="center" width="95%" style="margin: 15px auto 10px auto; border: 1px solid #72b6e6; background-color: #f3f7f9;">
+    <tr>
+        <td style="padding: 10px;">
+            <span style="font-size: 0.9em; line-height: 1.0em;">
+                From: <strong>${userName}</strong>
+                <a href="mailto:${userEmail}" style="color: #47c7b5; font-weight: bold;">&#60;${userEmail}&#62;</a>
+            </span><br/>
+        </td>
+    </tr>
+</table>
+                        </pre></code>
+                        <aside class="notes">
+                            <ul>
+                                <li>There are actually tools that put your CSS inline for you!</li>
+                            </ul>
+                        </aside>
+                    </section>
                 </section>
 
                 <section>
-                    <h2>Max Width: 600px</h2>
-                    <img src="img/no_max_width.png">
-                    <aside class="notes">
-                        <ul>
-                            <li>Based on email clients' preview panes</li>
-                            <li>Maximum readability (while avoiding scrolling)</li>
-                        </ul>
-                    </aside>
+                    <section>
+                        <h2>Max Width</h2>
+                        <img src="img/no_max_width.png">
+                        <aside class="notes">
+                            <ul>
+                                <li>Maximum readability (while avoiding scrolling)</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Max Width</h2>
+                        <h3>550 - 600px</h3>
+                        <pre><code data-trim contenteditable class="lang-html">
+<%--Wrapper Table Begin--%>
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" id="
+        backgroundTable" style="display: block; 
+        max-width: 600px; 
+        margin: 0 auto;">
+    </table>
+<%--Wrapper Table End--%>
+                        </pre></code>
+                        <aside class="notes">
+                            <ul>
+                                <li>Based on email clients' preview panes</li>
+                            </ul>
+                        </aside>
+                    </section>
                 </section>
 
                 <section>
-                    <h2>Image Alternatives</h2>
-                    <p>For browsers or clients that do not automatically display images, always have <em>alt=" "</em> or a background color.</p>
-                    <p>This is also great for accessibility!</p>
-                    <aside class="notes">
-                        <ul>
-                            <li>Background color example: HotPads footer image has a light blue background as backup.</li>
-                        </ul>
-                    </aside>
+                    <section>
+                        <h2>Image Alternatives</h2>
+                        <p>For browsers or clients that do not automatically display images, always have <em>alt=" "</em> or a background color.</p>
+                        <p>This is also great for accessibility!</p>
+                        <aside class="notes">
+                            <ul>
+                                <li>Background color example: HotPads footer image has a light blue background as backup.</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <img src="img/img_alt.png">
+                        <pre><code data-trim contenteditable class="lang-html">
+<img src="http://files.hotpads.com/images/email/hotpads_logo_email.png
+    " width="130px" alt="HotPads Logo" style="border:none">
+                        </pre></code>
+                        <p>or</p>
+                        <pre><code data-trim contenteditable class="lang-html">
+<img src="http://filenet.hotpads.com/images/email/footer.jpg" class="
+    footerImage" style="width:100%; background-color:#71B5E6;">
+                        </pre></code>
+                    </section>
                 </section>
 
                 <section>
                     <section>
                         <h2>My Template</h2>
-                        <a href="https://github.com/jennz0r/email-template/blob/master/genericTemplate.html">Code</a>
+                        <p>Check it out on <a href="https://github.com/jennz0r/email-template/blob/master/genericTemplate.html" target="_blank">Github</a></p>
                     </section>
                     <section>
                         <h2>Why Template?</h2>
-                        <!-- *************** ADD A BUNCH OF IMAGES HERE *************** -->
-                            <img src="">
-                            <img src="">
+                            <img width="460" src="img/saved_search_email.png" class="img-float-left">
+                            <img width="460" src="img/email_friend.png" class="img-float-left">
                         <aside class="notes">
                             <ul>
                                 <li>Keeping it DRY</li>
@@ -524,6 +574,19 @@
 
                 <section>
                     <section>
+                        <h2>!important</h2>
+                        <p>When sizing the &lt;td&gt; elements for the retina image replacement workaround</p>
+                        <a href="http://www.smashingmagazine.com/2010/11/02/the-important-css-declaration-how-and-when-to-use-it/">Smashing Magazine</a>
+                    </section>
+                    <section>
+                        <h2>Inline Overwriting Media Query (Padding)</h2>
+                        <aside class="notes">
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
                         <h2>Line Height</h2>
                         <img src="img/line_height_issue.png">
                         <aside class="notes">
@@ -535,10 +598,9 @@
                     </section>
                 </section>
 
-                <section>
-                    <h2>Inline Overwriting Media Query (Padding)</h2>
-                    <aside class="notes">
-                    </aside>
+                <section data-background="#4d7e65">
+                    <h2>Things I Learned After Release</h2>
+                    <h4>Oops</h4>
                 </section>
 
                 <section>
@@ -562,11 +624,6 @@
 </span>
                         </pre></code>
                     </section>
-                </section>
-
-                <section data-background="#4d7e65">
-                    <h2>Things I Learned After Release</h2>
-                    <h4>Oops</h4>
                 </section>
 
                 <section>
@@ -603,7 +660,7 @@
     }
 
 }
-                        </pre></code>
+                        </code></pre>
                         <br/>
                         <pre><code data-trim contenteditable class="lang-html">
 <table>
@@ -613,19 +670,38 @@
         </td>
     </tr>
 </table>
-                        </pre></code>
+                        </code></pre>
                     </section>
                 </section>
 
                 <section>
-                    <h2>!important</h2>
-                    <p>When sizing the &lt;td&gt; elements for the retina image replacement workaround</p>
-                    <a href="http://www.smashingmagazine.com/2010/11/02/the-important-css-declaration-how-and-when-to-use-it/">Smashing Magazine</a>
-                </section>
+                    <section>
+                        <h2>Outlook 2007, 2010, & 2013</h2>
+                        <p>ignore <em>max-width</em>.</p>
+                    </section>
+                    <section>
+                        <h2>Max Width Bypass</h2>
+                        <pre><code data-trim contenteditable class="lang-css">
+#backgroundTable {
+    margin:0;
+    padding:0;
+    width:100% !important;
+    line-height: 100% !important;
+}
 
-                <section>
-                    <h2>Outlook 2007, 2010, & 2013</h2>
-                    <p><a href="http://stylecampaign.com/blog/2011/08/using-media-to-bypass-max-width/">Style Campaign Max Width Bypass</a></p>
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    #backgroundTable {
+        max-width: 600px;
+    }
+}
+                        </code></pre>
+                        <p><a href="http://stylecampaign.com/blog/2011/08/using-media-to-bypass-max-width/" target="_blank">Style Campaign Max Width Bypass</a></p>
+                        <aside class="notes">
+                            <ul>
+                                <li>Set all use cases to have 100% width. For larger screens, </li>
+                            </ul>
+                        </aside>
+                    </section>
                 </section>
 
                 <section>
@@ -637,9 +713,8 @@
                     </section>
                     <section>
                         <h2>Gmail</h2>
-                        <p><em>And</em> "#000", "#000000", or "black" are not allowed for &lt;a&gt; <em>anywhere</em>.</p>
+                        <p><em>And</em> "#000", "#000000", or "black" are not allowed for &lt;a&gt; <em>anywhere</em>. Use a hex value that is close to black, such as "#040400".</p>
                         <p>But you shouldn't for accessbility's sake anyway!</p>
-                        <a href="http://www.emailonacid.com/blog/details/C13/12_things_you_must_know_when_developing_for_gmail_and_gmail_mobile_apps">Email On Acid Tips</a>
                     </section>
                 </section>
 
@@ -661,93 +736,8 @@
 
                 </section>
 
-                <section id="transitions">
-                    <h2>Transition Styles</h2>
-                    <p>
-                        You can select from different transitions, like: <br>
-                        <a href="?transition=cube#/transitions">Cube</a> -
-                        <a href="?transition=page#/transitions">Page</a> -
-                        <a href="?transition=concave#/transitions">Concave</a> -
-                        <a href="?transition=zoom#/transitions">Zoom</a> -
-                        <a href="?transition=linear#/transitions">Linear</a> -
-                        <a href="?transition=fade#/transitions">Fade</a> -
-                        <a href="?transition=none#/transitions">None</a> -
-                        <a href="?#/transitions">Default</a>
-                    </p>
-                </section>
-
-                <section id="themes">
-                    <h2>Themes</h2>
-                    <p>
-                        Reveal.js comes with a few themes built in: <br>
-                        <a href="?#/themes">Default</a> -
-                        <a href="?theme=sky#/themes">Sky</a> -
-                        <a href="?theme=beige#/themes">Beige</a> -
-                        <a href="?theme=simple#/themes">Simple</a> -
-                        <a href="?theme=serif#/themes">Serif</a> -
-                        <a href="?theme=night#/themes">Night</a> <br>
-                        <a href="?theme=moon#/themes">Moon</a> -
-                        <a href="?theme=solarized#/themes">Solarized</a>
-                    </p>
-                    <p>
-                        <small>
-                            * Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-                        </small>
-                    </p>
-                </section>
-
                 <section>
-                    <h2>Global State</h2>
-                    <p>
-                        Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-                        will be added as a class to the document element when the slide is open. This lets you
-                        apply broader style changes, like switching the background.
-                    </p>
-                </section>
-
-                <section data-state="customevent">
-                    <h2>Custom Events</h2>
-                    <p>
-                        Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-                    </p>
-                    <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-    console.log( '"customevent" has fired' );
-} );
-                    </code></pre>
-                </section>
-
-                <section>
-                    <section>
-                        <h2>Fragment Styles</h2>
-                        <p>There's a few styles of fragments, like:</p>
-                        <p class="fragment grow">grow</p>
-                        <p class="fragment shrink">shrink</p>
-                        <p class="fragment roll-in">roll-in</p>
-                        <p class="fragment fade-out">fade-out</p>
-                        <p class="fragment highlight-red">highlight-red</p>
-                        <p class="fragment highlight-green">highlight-green</p>
-                        <p class="fragment highlight-blue">highlight-blue</p>
-                        <p class="fragment current-visible">current-visible</p>
-                        <p class="fragment highlight-current-blue">highlight-current-blue</p>
-                    </section>
-                </section>
-
-                <section>
-                    <h2>Export to PDF</h2>
-                    <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-                    <iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-                    <script>
-                        document.getElementById('slideshare').attributeName = 'allowfullscreen';
-                    </script>
-                </section>
-
-                <section>
-                    <h2>Take a Moment</h2>
-                    <p>
-                        Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-                        during a presentation.
-                    </p>
+                    <h1>Questions?</h1>
                 </section>
 
             </div>
