@@ -549,10 +549,41 @@
                 </section>
 
                 <section>
-                    <h2>Media Queries</h2>
-
-                    <aside class="notes">
-                    </aside>
+                    <section>
+                        <h2>Media Queries</h2>
+                        <p>Awesome for things like readability (making font-size larger) or targetting devices (over browser)!</p>
+                        <pre><code data-trim contenteditable class="lang-css">
+@media only screen and (min-device-width: 768px) and 
+    (max-device-width: 1024px) {
+        #backgroundTable {
+            max-width: 600px;
+        }
+    }
+                        </code></pre>
+                        <aside class="notes">
+                            Here I'm targetting larger browser screens, ensuring a max-width on my emails.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Media Queries</h2>
+                        <p>Target Apple devices with 480px</p>
+                        <pre><code data-trim contenteditable class="lang-css">
+@media only screen and (max-width: 480px), 
+    (max-device-width: 480px) {
+        // Small screen styles here
+    }
+                        </code></pre>
+                        <aside class="notes">
+                            Here I'm targetting both the display area (or browser) and the width of a device's screen.
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Media Queries</h2>
+                        <p>I recommend using them in conjunction with fluid layouts or percentage based widths.</p>
+                        <aside class="notes">
+                            This will cover screens that are smaller than 480px as well as devices and clients that don't support media queries.
+                        </aside>
+                    </section>
                 </section>
 
                 <section>
@@ -561,11 +592,12 @@
                         <blockquote>"The device pixel ratio is the ratio between logical pixels and physical pixels."</blockquote>
                     </section>
                     <section>
+                        <p>Use DPR to target retina devices</p>
                         <pre><code data-trim contenteditable class="lang-css">
-    @media  all and (min-device-pixel-ratio : 1.5), 
-            all and (-webkit-min-device-pixel-ratio: 1.5) {
-                // Retina device styles go here!
-            }
+@media  all and (min-device-pixel-ratio : 1.5), 
+        all and (-webkit-min-device-pixel-ratio: 1.5) {
+            // Retina device styles go here!
+        }
                         </pre></code>
                         <aside class="notes">
                         </aside>
@@ -575,12 +607,30 @@
                 <section>
                     <section>
                         <h2>!important</h2>
-                        <p>When sizing the &lt;td&gt; elements for the retina image replacement workaround</p>
-                        <a href="http://www.smashingmagazine.com/2010/11/02/the-important-css-declaration-how-and-when-to-use-it/">Smashing Magazine</a>
+                        <p>Sometimes inline styles overwrite media queries...</p>
                     </section>
                     <section>
-                        <h2>Inline Overwriting Media Query (Padding)</h2>
+                        <h2>Use !important</h2>
+                        <pre><code data-trim contenteditable class="lang-css">
+@media only screen and (max-width: 480px), (max-device-width: 480px) {
+    .headerBar {
+        height: 5px !important;
+        line-height: 5px !important;
+    }
+}
+                        </code></pre>
+                        <pre><code data-trim contenteditable class="lang-html">
+<table>
+    <tr>
+        <td colspan="3" class="headerBar" style="
+            height: 10px; line-height: 10px;">
+                <span>Blah blah blah</span>
+        </td>
+    </tr>
+</table>
+                        </code></pre>
                         <aside class="notes">
+
                         </aside>
                     </section>
                 </section>
@@ -671,8 +721,14 @@
     </tr>
 </table>
                         </code></pre>
+                        <aside class="notes">
+                            <ul>
+                                <li>Note use of !important in order to resize &lt;td&gt;.</li>
+                            </ul>
+                        </aside>
                     </section>
                 </section>
+
 
                 <section>
                     <section>
