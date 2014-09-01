@@ -530,17 +530,27 @@
                             </ul>
                         </aside>
                     </section>
+                    <section>
+                        <h2>A Note About Comments</h2>
+                        <p>Tables all the way down.</p>
+                        <img src="img/turtles.jpg">
+                        <aside class="notes">
+                            <ul>
+                                <li>Life saver when you have tables in tables in tables</li>
+                            </ul>
+                        </aside>
+                    </section>
                 </section>
 
                 <!-- Slide 15 -->
                 <section>
                     <section>
                         <h2>Image Alternatives</h2>
-                        <p>For browsers or clients that do not automatically display images, always have <em>alt=" "</em> or a background color.</p>
+                        <p>Always have <em>alt=" "</em> or a background color.</p>
                         <p>This is also great for accessibility!</p>
                         <aside class="notes">
                             <ul>
-                                <li>Background color example: HotPads footer image has a light blue background as backup.</li>
+                                <li>Some browsers or clients do not automatically display images.</li>
                             </ul>
                         </aside>
                     </section>
@@ -571,7 +581,7 @@
                         <aside class="notes">
                             <ul>
                                 <li>Keeping it DRY - Don't repeat yourself!</li>
-                                <li>A little abstraction goes a long way.<li>
+                                <li>A little abstraction goes a long way.</li>
                                 <li>Consistency! Which again means brand recognition.</li>
                             </ul>
                         </aside>
@@ -705,7 +715,11 @@
                         </aside>
                     </section>
                     <section>
-                        <p>Set line-height: 0 on the surrounding &lt;td&gt; or set the image to display: block, so it doesn't interact with line heights</p>
+                        <h2>Solutions</h2>
+                        <ul>
+                            <li>Set a <em>line-height</em> on the surrounding &lt;td&gt;</li>
+                            <li>Set the &lt;img&gt; to <em>display: block;</em> (so it doesn't interact with line heights)</li>
+                        </ul>
                     </section>
                 </section>
 
@@ -721,6 +735,11 @@
                         <h2>&lt;Img&gt; Within &lt;a&gt;</h2>
                         <img src="img/lurk.jpg">
                         <p>Super weird and only occurs occasionally.</p>
+                        <aside class="notes">
+                            <ul>
+                                <li>A thin gray outline or border will appear around your images.</li>
+                            </ul>
+                        </aside>
                     </section>
                     <section>
                         <pre><code data-trim contenteditable class="lang-html">
@@ -750,7 +769,7 @@
                         <p>Outlook 2007, 2010, 2013, and Outlook in IE don't allow HTML or CSS image sizing. Argh.</p>
                         <br/>
                         <h3>The Solution</h3>
-                        <p>Replace &lt;img&gt; by setting a background-img style on the surrounding &lt;td&gt; and assigning display: none; on the &lt;img&gt;.</p>
+                        <p>Replace &lt;img&gt; by setting a <em>background-image</em> style on the surrounding &lt;td&gt; and assigning <em>display: none;</em> on the &lt;img&gt;.</p>
                         <p><a href="https://www.campaignmonitor.com/guides/mobile/optimizing-images/">Campaign Monitor</a></p>
                     </section>
                     <section>
@@ -801,9 +820,9 @@
                         <h2>Max Width Bypass</h2>
                         <pre><code data-trim contenteditable class="lang-css">
 #backgroundTable {
-    margin:0;
-    padding:0;
-    width:100% !important;
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
     line-height: 100% !important;
 }
 
@@ -816,7 +835,9 @@
                         <p><a href="http://stylecampaign.com/blog/2011/08/using-media-to-bypass-max-width/" target="_blank">Style Campaign Max Width Bypass</a></p>
                         <aside class="notes">
                             <ul>
-                                <li>Set all use cases to have 100% width. For larger screens, </li>
+                                <li>Set the fluid layout as your baseline.</li>
+                                <li>Set all use cases to have 100% width.</li>
+                                <li>For larger screens, use a max or fixed width.</li>
                             </ul>
                         </aside>
                     </section>
@@ -832,7 +853,9 @@
                     </section>
                     <section>
                         <h2>Gmail</h2>
-                        <p><em>And</em> "#000", "#000000", or "black" are not allowed for &lt;a&gt; <em>anywhere</em>. Use a hex value that is close to black, such as "#040400".</p>
+                        <p><em>And</em> "#000", "#000000", or "black" are ignored on &lt;a&gt;.</p>
+                        <br/>
+                        <p>Use a color that's close to black like "#040400".</p>
                         <p>But you shouldn't for accessbility's sake anyway!</p>
                     </section>
                 </section>
@@ -843,7 +866,7 @@
                 </section>
 
             <!-- Slide 28 -->
-                <section>
+                <section data-background="img/device_lab.jpg">
                     <h2>Blogs</h2>
                     <ul>
                         <li>
@@ -884,7 +907,7 @@
                 </section>
 
             <!-- Slide 31 -->
-                <section>
+                <section data-background="img/prince02a.jpg">
                     <h1>Questions?</h1>
                     <p>
                         <a href="http://mochimachine.org/" target="_blank">Jennifer Wong</a><br/>
