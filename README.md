@@ -1,4 +1,5 @@
-Slides for "Tonight We're Gonna Code Like It's 1999: Designing Responsive Emails".
+#Slides for "Tonight We're Gonna Code Like It's 1999: Designing Responsive Emails"
+
 
 Talk description:
 
@@ -10,4 +11,4 @@ It's the moment you’ve been dreading: the project of redesigning all consumer 
 * Third-party tools and knowledgeable blogs that weed through the ugliness and what parts you still need to code by hand. [Zurb Ink, Litmus, Campaign Monitor, Style Campaign (hide list of resources for talk description)].
 
 
-# reveal.js [![Build Status](https://travis-ci.org/hakimel/reveal.js.png?branch=master)](https://travis-ci.org/hakimel/reveal.js)
+Using reveal.js [![Build Status](https://travis-ci.org/hakimel/reveal.js.png?branch=master)](https://travis-ci.org/hakimel/reveal.js)
