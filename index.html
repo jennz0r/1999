@@ -603,7 +603,7 @@
                 <section>
                     <section>
                         <h2>Media Queries</h2>
-                        <p>Awesome for things like readability (making font-size larger) or targetting devices (over browser)!</p>
+                        <p>Awesome for things like readability or targetting devices!</p>
                         <pre><code data-trim contenteditable class="lang-css">
 @media only screen and (min-device-width: 768px) and 
     (max-device-width: 1024px) {
@@ -635,7 +635,13 @@
                     </section>
                     <section>
                         <h2>Media Queries</h2>
-                        <p>I recommend using them in conjunction with fluid layouts or percentage based widths.</p>
+                        <p>Use in conjunction with fluid layouts i.e. percentage based widths.</p>
+                        <pre><code data-trim contenteditable class="lang-css">
+@media only screen and (max-width: 480px), 
+    (max-device-width: 480px) {
+        // Small screen styles here
+    }
+                        </code></pre>
                         <aside class="notes">
                             <ul>
                                 <li>This will cover screens that are smaller than 480px as well as devices and clients that don't support media queries.</li>
@@ -834,7 +840,7 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     #backgroundTable {
-        max-width: 600px;
+        width: 600px;
     }
 }
                         </code></pre>
