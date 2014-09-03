@@ -566,7 +566,7 @@
 <img src="http://files.hotpads.com/images/email/hotpads_logo_email.png
     " width="130px" alt="HotPads Logo" style="border:none">
                         </code></pre>
-                        <p>or</p>
+                        <h4>or</h4>
                         <pre><code data-trim contenteditable class="lang-html">
 <img src="http://filenet.hotpads.com/images/email/footer.jpg" class="
     footerImage" style="width:100%; background-color:#71B5E6;">
@@ -637,10 +637,17 @@
                         <h2>Media Queries</h2>
                         <p>Use in conjunction with fluid layouts i.e. percentage based widths.</p>
                         <pre><code data-trim contenteditable class="lang-css">
-@media only screen and (max-width: 480px), 
-    (max-device-width: 480px) {
-        // Small screen styles here
+@media only screen and (min-device-width: 768px) and 
+    (max-device-width: 1024px) {
+        #backgroundTable {
+            max-width: 600px;
+        }
     }
+                        </code></pre>
+                        <h4>AND</h4>
+                        <pre><code data-trim contenteditable class="lang-html">
+<table width="100%">
+</table>
                         </code></pre>
                         <aside class="notes">
                             <ul>
@@ -896,10 +903,16 @@
                         <li><a href="https://www.campaignmonitor.com/blog/" target="_blank">Campaign Monitor</a></li>
                         <li><a href="http://blog.mailchimp.com/" target="_blank">Mail Chimp</a></li>
                     </ul>
+                    <aside class="notes">
+                        <ul>
+                            <li>Run by Anna Yeaman - Creative Director</li>
+                            <li>Online marketing email solutions - including sending capabilities, analytics, etc.</li>
+                        </ul>
+                    </aside>
                 </section>
 
             <!-- Slide 29 -->
-                <section>
+                <section data-background="img/template.png">
                     <h2>Templates</h2>
                     <ul>
                         <li><a href="http://zurb.com/ink/" target="_blank">Zurb Ink</a></li>
@@ -907,10 +920,16 @@
                         <li><a href="http://templates.mailchimp.com/" target="_blank">Mail Chimp Templates</a></li>
                         <li><a href="http://htmlemailboilerplate.com/" target="_blank">HTML Email Boilerplate</a></li>
                     </ul>
+                    <aside class="notes">
+                        <ul>
+                            <li>Creators of Zurb Foundation - responsive web framework</li>
+                            <li>By Sean Powell</li>
+                        </ul>
+                    </aside>
                 </section>
 
             <!-- Slide 30 -->
-                <section>
+                <section data-background="img/testing.png">
                     <h2>Testing</h2>
                     <ul>
                         <li><a href="http://www.emailonacid.com/" target="_blank">Email on Acid</a></li>
