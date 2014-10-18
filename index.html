@@ -393,8 +393,7 @@
                 <section>
                     <section>
                         <h2>Inline Styles</h2>
-                        <p>You've gotta use 'em because email basically supports no CSS.</p>
-                        <p>Outlook and Gmail hate you.</p>
+                        <p>You've gotta use 'em!</p>
                         <p>See <a href="https://www.campaignmonitor.com/css/" target="_blank">Campaign Monitor CSS</a> page.</p>
                     </section>
                     <section>
@@ -531,21 +530,6 @@
                         <aside class="notes">
                             <ul>
                                 <li>Here I'm targetting larger browser screens, ensuring a max-width on my emails.</li>
-                            </ul>
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Media Queries</h2>
-                        <p>Target Apple devices with 480px</p>
-                        <pre><code data-trim contenteditable class="lang-css">
-@media only screen and (max-width: 480px), 
-    (max-device-width: 480px) {
-        // Small screen styles here
-    }
-                        </code></pre>
-                        <aside class="notes">
-                            <ul>
-                                <li>Here I'm targetting both the screen display area (or browser) and the width of a device's screen.</li>
                             </ul>
                         </aside>
                     </section>
@@ -787,16 +771,23 @@
                         <h3>WTF?</h3>
                         <aside class="notes">
                             <ul>
-                                <li>Set the fluid layout as your baseline.</li>
-                                <li>Set all use cases to have 100% width.</li>
-                                <li>For larger screens, use a max or fixed width.</li>
+                                <li></li>
                             </ul>
                         </aside>
                     </section>
                     <section>
                         <p>
-                            They use their respective Microsoft Word (2007, 2010, 2013) rendering engines to display HTML email. Outlook 2011, aka "Outlook for Mac", on the other hand, runs on OS X and uses WebKit to render emails (woo hoo!). Outlook 2000 - 2003 use Internet Explorer as their rendering engine - whichever happens to be installed on that particular OS.
+                            Outlook 2000-2003: Internet Explorer
+
+                            Outlook 2007, 2010, 2013: Microsoft Word
+
+                            Outlook 2011, aka "Outlook for Mac": WebKit
                         </p>
+                        <aside class="notes">
+                            <ul>
+                                <li>Outlook 2000-2003 use whatever version of IE is installed on that particular OS</li>
+                            </ul>
+                        </aside>
                     </section>
                 </section>
 
@@ -807,13 +798,6 @@
                         <p>Ignores &lt;a&gt; color styles in the &lt;head&gt;.</p>
                         <p>You have to style <em>each and every</em> &lt;a&gt; inline.</p>
                         <img src="img/what_the_what.gif">
-                    </section>
-                    <section>
-                        <h2>Gmail</h2>
-                        <p><em>And</em> "#000", "#000000", or "black" are ignored on &lt;a&gt;.</p>
-                        <br/>
-                        <p>Use a color that's close to black like "#040400".</p>
-                        <p>But you shouldn't for accessbility's sake anyway!</p>
                     </section>
                 </section>
 
@@ -826,18 +810,8 @@
                 <section data-background="img/device_lab.jpg">
                     <h2>Blogs</h2>
                     <ul>
-                        <li>
-                            <a href="http://stylecampaign.com" target="_blank">Style Campaign</a>
-                            <ul>
-                                <li class="list-small-font"><a href="http://stylecampaign.com/blog/2013/03/responsive-email-design-red/" target="_blank">Responsive Email Design</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="https://litmus.com" target="_blank">Litmus</a>
-                            <ul>
-                                <li class="list-small-font"><a href="https://litmus.com/blog/anatomy-mobile-email/anatomy-mobile-email-24-1000px" target="_blank">Anatomy of a Mobile Email</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="http://stylecampaign.com" target="_blank">Style Campaign</a></li>
+                        <li><a href="https://litmus.com" target="_blank">Litmus</a></li>
                         <li><a href="https://www.campaignmonitor.com/blog/" target="_blank">Campaign Monitor</a></li>
                         <li><a href="http://blog.mailchimp.com/" target="_blank">Mail Chimp</a></li>
                     </ul>
