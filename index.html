@@ -66,7 +66,7 @@
                     <section>
                         <h2>Then I Decided</h2>
                         <p>
-                            I wanted to be part of the Tech industry, so I started working as a "Community Specialist" for a "startup".
+                            I wanted to be part of Tech, so I started working as a "Community Specialist".
                         </p>
                         <img width="336" height="240" src="img/customerservice.jpg" alt="customer service">
                         <p>
@@ -91,8 +91,9 @@
                 <section>
                     <section>
                         <h2>Here we go</h2>
+                        <h3>My First Assignment</h3>
                         <p>
-                            My first assignment was to redesign emails and make them mobile-friendly.
+                            Redesign emails and make them mobile-friendly.
                         </p>
                     </section>
                     <section>
@@ -160,13 +161,9 @@
                     </section>
                     <section>
                         <h2>Most Favoritest</h2>
-                        <ul>
-                            <li class="fragment"><a href="http://us5.campaign-archive1.com/?u=4109fdd323aaac7078eadaa8f&id=428592062f&e=988a1e2a6f" target="_blank">Radiolab</a></li>
-                            <li class="fragment"><a href="http://us4.campaign-archive2.com/?u=9e8b6cadd22dfef20841a79fb&id=6b0b0ea0e5&e=e9d53fe639" target="_blank">indiegogo</a></li>
-                        </ul>
+                            <p><a href="http://us4.campaign-archive2.com/?u=9e8b6cadd22dfef20841a79fb&id=6b0b0ea0e5&e=e9d53fe639" target="_blank">indiegogo</a></p>
                         <br/>
-                        <br/>
-                        <p>I know, I know, these are not welcome emails.</p>
+                        <p>I know, I know, this is not a welcome email.</p>
                         <p>But they're just so pretty!</p>
                         <aside class="notes">
                         	<ul>
@@ -331,25 +328,24 @@
                     <h3>Tips and Tricks</h3>
                 </section>
 
-                <!-- Slide 10 -->
+                <!-- Slide 16 -->
                 <section>
-                    <h2>Java Templates: A Brief Note</h2>
-                    <p>
-                        <a href="https://velocity.apache.org/engine/releases/velocity-1.5/user-guide.html" target="_blank">Velocity</a> vs <a href="http://en.wikipedia.org/wiki/JavaServer_Pages" target="_blank">JavaServer Page (JSP)</a>
-                    </p>
-                    <a href="img/velocity.png" target="_blank">
-                        <img width="460" src="img/velocity.png" class="img-float-left">
-                    </a>
-                    <a href="img/jsp.png" target="_blank">
-                        <img width="460" src="img/jsp.png" class="img-float-left">
-                    </a>
-                    <aside class="notes">
-                        <ul>
-                            <li>Translate the Velocity templates into JSPs.</li>
-                            <li>Common syntax between our web pages and emails.</li>
-                            <li>This will likely not be a concern for you, but now you'll understand that the weirdnesses in my HTML are due to JSP.</li>
-                        </ul>
-                    </aside>
+                    <section>
+                        <h2>My Template</h2>
+                        <p>Check it out on <a href="https://github.com/jennz0r/email-template/blob/master/genericTemplate.html" target="_blank">Github</a></p>
+                    </section>
+                    <section>
+                        <h2>Why Template?</h2>
+                            <img width="460" src="img/saved_search_email.png" class="img-float-left">
+                            <img width="460" src="img/email_friend.png" class="img-float-left">
+                        <aside class="notes">
+                            <ul>
+                                <li>Keeping it DRY - Don't repeat yourself!</li>
+                                <li>A little abstraction goes a long way.</li>
+                                <li>Consistency! Which again means brand recognition.</li>
+                            </ul>
+                        </aside>
+                    </section>
                 </section>
 
                 <!-- Slide 11 -->
@@ -395,6 +391,9 @@
                         <h2>Inline Styles</h2>
                         <p>You've gotta use 'em!</p>
                         <p>See <a href="https://www.campaignmonitor.com/css/" target="_blank">Campaign Monitor CSS</a> page.</p>
+                        <aside class="notes">
+                            Email clients do not support a &lt;head&gt; section.
+                        </aside>
                     </section>
                     <section>
                         <h2>Inline Styles</h2>
@@ -489,27 +488,7 @@
                     </section>
                 </section>
 
-                <!-- Slide 16 -->
-                <section>
-                    <section>
-                        <h2>My Template</h2>
-                        <p>Check it out on <a href="https://github.com/jennz0r/email-template/blob/master/genericTemplate.html" target="_blank">Github</a></p>
-                    </section>
-                    <section>
-                        <h2>Why Template?</h2>
-                            <img width="460" src="img/saved_search_email.png" class="img-float-left">
-                            <img width="460" src="img/email_friend.png" class="img-float-left">
-                        <aside class="notes">
-                            <ul>
-                                <li>Keeping it DRY - Don't repeat yourself!</li>
-                                <li>A little abstraction goes a long way.</li>
-                                <li>Consistency! Which again means brand recognition.</li>
-                            </ul>
-                        </aside>
-                    </section>
-                </section>
-
-                <!-- Slide 17 -->
+            <!-- Slide 17 -->
                 <section data-background="#4d7e65">
                     <h2>Things I Learned While Coding</h2>
                 </section>
@@ -776,13 +755,12 @@
                         </aside>
                     </section>
                     <section>
-                        <p>
-                            Outlook 2000-2003: Internet Explorer
-
-                            Outlook 2007, 2010, 2013: Microsoft Word
-
-                            Outlook 2011, aka "Outlook for Mac": WebKit
-                        </p>
+                        <h2>Rendering Engines</h2>
+                        <ul>
+                            <li>Outlook 2000 - 2003: <em>Internet Explorer</em></li>
+                            <li>Outlook 2007, 2010, 2013: <em>Microsoft Word</em></li>
+                            <li>Outlook 2011, "Outlook for Mac": <em>WebKit</em></li>
+                        </ul>
                         <aside class="notes">
                             <ul>
                                 <li>Outlook 2000-2003 use whatever version of IE is installed on that particular OS</li>
